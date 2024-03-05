@@ -11,18 +11,18 @@ class DetailScreenController extends GetxController {
   bool _isTimerRunning = false;
 
   var emojiList = <Emoji>[
-    Emoji(id: "1", name: "meh-alt", svgUrl: icEmoji1),
-    Emoji(id: "2", name: "meh-alt", svgUrl: icEmoji2),
-    Emoji(id: "3", name: "meh-alt", svgUrl: icEmoji3),
-    Emoji(id: "4", name: "meh-alt", svgUrl: icEmoji4),
-    Emoji(id: "5", name: "meh-alt", svgUrl: icEmoji5),
-    Emoji(id: "6", name: "meh-alt", svgUrl: icEmoji6),
-    Emoji(id: "7", name: "meh-alt", svgUrl: icEmoji7),
-    Emoji(id: "8", name: "meh-alt", svgUrl: icEmoji8),
-    Emoji(id: "9", name: "meh-alt", svgUrl: icEmoji9),
-    Emoji(id: "10", name: "meh-alt", svgUrl: icEmoji10),
-    Emoji(id: "11", name: "meh-alt", svgUrl: icEmoji11),
-    Emoji(id: "12", name: "meh-alt", svgUrl: icEmoji12),
+    Emoji(id: "1", name: "Emoji1", svgUrl: icEmoji1),
+    Emoji(id: "2", name: "Emoji2", svgUrl: icEmoji2),
+    Emoji(id: "3", name: "Emoji3", svgUrl: icEmoji3),
+    Emoji(id: "4", name: "Emoji4", svgUrl: icEmoji4),
+    Emoji(id: "5", name: "Emoji5", svgUrl: icEmoji5),
+    Emoji(id: "6", name: "Emoji6", svgUrl: icEmoji6),
+    Emoji(id: "7", name: "Emoji7", svgUrl: icEmoji7),
+    Emoji(id: "8", name: "Emoji8", svgUrl: icEmoji8),
+    Emoji(id: "9", name: "Emoji9", svgUrl: icEmoji9),
+    Emoji(id: "10", name: "Emoji10", svgUrl: icEmoji10),
+    Emoji(id: "11", name: "Emoji11", svgUrl: icEmoji11),
+    Emoji(id: "12", name: "Emoji12", svgUrl: icEmoji12),
   ].obs;
 
   void startTime() async {
