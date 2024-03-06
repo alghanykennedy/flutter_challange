@@ -1,7 +1,7 @@
+import 'package:flutter_challenge/app/modules/detail_screen/views/detail_screen_view_3.dart';
 import 'package:get/get.dart';
 
 import 'package:flutter_challenge/app/modules/detail_screen/bindings/detail_screen_binding.dart';
-import 'package:flutter_challenge/app/modules/detail_screen/views/detail_screen_view.dart';
 import 'package:flutter_challenge/app/modules/home/bindings/home_binding.dart';
 import 'package:flutter_challenge/app/modules/home/views/home_view.dart';
 
@@ -15,12 +15,12 @@ class AppPages {
   static final routes = [
     GetPage(
       name: _Paths.HOME,
-      page: () => HomeView(),
+      page: () => const HomeView(),
       binding: HomeBinding(),
     ),
     GetPage(
       name: _Paths.DETAIL_SCREEN,
-      page: () => DetailScreenView(),
+      page: () => const DetailScreenView3(),
       binding: DetailScreenBinding(),
     ),
   ];

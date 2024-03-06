@@ -11,6 +11,7 @@ dependencies:
     sdk: flutter
   flutter_svg: ^2.0.10+1
   get: 4.6.6
+  random_color: ^1.0.5
 
 dev_dependencies:
   flutter_lints: ^2.0.0

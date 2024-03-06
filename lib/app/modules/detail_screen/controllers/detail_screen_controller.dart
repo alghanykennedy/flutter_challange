@@ -1,12 +1,15 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_challenge/app/data/model_emoji.dart';
 import 'package:get/get.dart';
 
 import '../../../core/assets.dart';
 
 class DetailScreenController extends GetxController {
-  final Rx<int> timer = 60.obs;
+  final Rx<int> timer = 6100.obs;
   final RxString message = "".obs;
   RxString imagePreview = "".obs;
+
+  RxList<Widget> movableEmoji = <Widget>[].obs;
 
   bool _isTimerRunning = false;
 
@@ -27,7 +30,7 @@ class DetailScreenController extends GetxController {
 
   void startTime() async {
     _isTimerRunning = true;
-    for (var i = 60; i >= 0; i--) {
+    for (var i = timer.value; i >= 0; i--) {
       if (!_isTimerRunning) {
         break;
       }
@@ -36,6 +39,7 @@ class DetailScreenController extends GetxController {
       if (i == 0) {
         Get.back();
         message.value = "Timeout!";
+        imagePreview.value = "";
       }
     }
   }
@@ -45,7 +49,7 @@ class DetailScreenController extends GetxController {
   }
 
   void onSubmit() {
-    if (imagePreview.value.isEmpty) {
+    if (movableEmoji.isEmpty) {
       message.value = "You haven't imported any Emoji.";
     } else {
       message.value = "Success import Emoji!";

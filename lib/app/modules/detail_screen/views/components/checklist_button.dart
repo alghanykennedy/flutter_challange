@@ -13,20 +13,16 @@ class ChecklistButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Positioned(
-      top: 120,
-      right: 90,
-      child: InkWell(
-        onTap: controller.onSubmit,
-        child: Container(
-          height: 35,
-          width: 35,
-          color: green,
-          child: const Icon(
-            Icons.check,
-            color: white,
-            size: 28,
-          ),
+    return InkWell(
+      onTap: controller.onSubmit,
+      child: Container(
+        height: 35,
+        width: 35,
+        color: green,
+        child: const Icon(
+          Icons.check,
+          color: white,
+          size: 28,
         ),
       ),
     );

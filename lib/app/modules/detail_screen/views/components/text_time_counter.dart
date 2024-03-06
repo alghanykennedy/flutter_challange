@@ -25,7 +25,7 @@ class TextTimeCounter extends StatelessWidget {
           ),
         ),
         const SizedBox(
-          height: 50,
+          height: 10,
         ),
       ],
     );

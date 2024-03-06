@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../../core/theme.dart';
 import '../../../../core/widgets/emoji.dart';
 import '../../../detail_screen/controllers/detail_screen_controller.dart';
 
@@ -23,9 +22,6 @@ class ImagePreview extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const SizedBox(
-          height: 50,
-        ),
         Obx(
           () => Container(
             height: height,
@@ -34,22 +30,29 @@ class ImagePreview extends StatelessWidget {
               borderRadius: const BorderRadius.all(
                 Radius.circular(6),
               ),
+              border: Border.all(width: 1),
               color: controllerDetail.imagePreview.value.isEmpty
-                  ? Colors.grey.withOpacity(0.8)
-                  : greyHint,
+                  ? Colors.grey
+                  : Colors.transparent,
+              // color: Colors.transparent,
             ),
             child: Center(
+              //     child: Text(
+              //   title,
+              //   textAlign: TextAlign.center,
+              // )
               child: controllerDetail.imagePreview.isEmpty
                   ? Text(
                       title,
                       textAlign: TextAlign.center,
                     )
-                  : EmojiWidget(controllerDetail: controllerDetail),
+                  : Draggable(
+                      feedback: EmojiWidget(controllerDetail: controllerDetail),
+                      childWhenDragging: Container(),
+                      child: EmojiWidget(controllerDetail: controllerDetail),
+                    ),
             ),
           ),
-        ),
-        const SizedBox(
-          height: 50,
         ),
       ],
     );
