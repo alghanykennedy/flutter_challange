@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_challenge/app/modules/detail_screen/views/components/draggable_emoji.dart';
 import 'package:get/get.dart';
 
 import '../../controllers/detail_screen_controller.dart';
 import 'emoji_icon_widget.dart';
 
-class ListEmojiWidget extends StatelessWidget {
-  const ListEmojiWidget({
+class ListEmojiWidget3 extends StatelessWidget {
+  const ListEmojiWidget3({
     super.key,
     required this.controller,
   });
@@ -40,7 +41,11 @@ class ListEmojiWidget extends StatelessWidget {
                       emoji: emoji,
                       iconColor: Colors.grey.withOpacity(0.8),
                     ),
-                    onTap: () => controller.onEmojiDropped(emoji),
+                    onTap: () {
+                      // controller.onEmojiDropped(emoji);
+                      controller.movableEmoji
+                          .add(MoveableStackEmoji(svg: emoji.svgUrl));
+                    },
                   );
                   // Draggable<Emoji>(
                   //   data: emoji,

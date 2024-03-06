@@ -31,9 +31,9 @@ class HomeView extends GetView<HomeController> {
             /// Image Preview
             ImagePreview(
               title: "Image Preview From Detail Screen",
-              controllerDetail: controllerDetail,
               height: 250,
               width: 250,
+              controllerDetail: controllerDetail,
             ),
 
             /// Button
